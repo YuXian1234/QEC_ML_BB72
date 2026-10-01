@@ -1,0 +1,33 @@
+# Environment
+.env
+.env.local
+*.local
+.qenv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+*.db
+*.sqlite3
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Editors / OS
+.vscode/
+
+# Logs
+*.log
+weight6_logical_supports.md
+gpu_test.py
+bp_osd_baseline_comparison.md
+decoder_run_comparison.md
+.claude
+.codex

@@ -1,0 +1,7 @@
+osd_method,osd_order,error_type,shots_per_point,num_p_points,total_decodes,runtime_seconds,seconds_per_decode,csv_path
+OSD_CS,0,X,5000,6,30000,5.261368737999874,0.00017537895793332914,results/codex_20260929_qldpc_X_order0.csv
+OSD_CS,2,X,5000,6,30000,4.828559645000496,0.0001609519881666832,results/codex_20260929_qldpc_X_order2.csv
+OSD_CS,4,X,5000,6,30000,4.770174234001388,0.00015900580780004627,results/codex_20260929_qldpc_X_order4.csv
+OSD_CS,6,X,5000,6,30000,4.8148578599993925,0.00016049526199997976,results/codex_20260929_qldpc_X_order6.csv
+OSD_CS,8,X,5000,6,30000,4.951636034998955,0.00016505453449996518,results/codex_20260929_qldpc_X_order8.csv
+OSD_CS,10,X,5000,6,30000,4.949151824999717,0.00016497172749999056,results/codex_20260929_qldpc_X_order10.csv

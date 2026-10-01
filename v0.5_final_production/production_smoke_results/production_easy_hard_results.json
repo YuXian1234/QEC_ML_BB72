@@ -1,0 +1,82 @@
+{
+  "version": "v0.5_final_production",
+  "scope": "P0-P5 validated production baseline",
+  "bb72": {
+    "n": 72,
+    "k": 12,
+    "block_size": 9,
+    "logical_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "profile": "/home/users/astar/ihpc/youjb/tn_decoder/exact_bnb/v0.5_final_production/profiles/canonical_paths_b9_0-1-2-3-4-5-6-7-8-9-10-11.pkl",
+  "p": 0.005,
+  "settings": {
+    "memory_limit": "50%",
+    "guard_rtol": 1e-12,
+    "constant_cache": true,
+    "gpu_resident_operands": true,
+    "retain_scratch": false,
+    "warmup": 1,
+    "repeats": 5
+  },
+  "rows": [
+    {
+      "case": "easy",
+      "wall_median_s": 0.2073654429987073,
+      "wall_min_s": 0.20726730185560882,
+      "wall_max_s": 0.2075593089684844,
+      "oracle_calls_median": 2.0,
+      "leaves_median": 1.0,
+      "pruned_leaves_median": 4095.0,
+      "best_probability": 0.9999999955333834,
+      "best_lambda": "000000000000",
+      "true_lambda": "000000000000",
+      "call_counter_example": "{\"0-1-2-3-4-5-6-7-8\": 1, \"9-10-11\": 1}"
+    },
+    {
+      "case": "hard",
+      "wall_median_s": 0.39085228298790753,
+      "wall_min_s": 0.39081196510232985,
+      "wall_max_s": 0.3911464139819145,
+      "oracle_calls_median": 4.0,
+      "leaves_median": 3.0,
+      "pruned_leaves_median": 4093.0,
+      "best_probability": 0.3333164874732356,
+      "best_lambda": "111011000000",
+      "true_lambda": "100110011001",
+      "call_counter_example": "{\"0-1-2-3-4-5-6-7-8\": 1, \"9-10-11\": 3}"
+    }
+  ],
+  "reference_checks": [
+    {
+      "lambda": "000000000000",
+      "lambda_ok": true,
+      "probability": 0.9999999955333834,
+      "reference_probability": 0.9999999955333834,
+      "probability_abs_diff": 0.0,
+      "pass": true,
+      "case": "easy"
+    },
+    {
+      "lambda": "111011000000",
+      "lambda_ok": true,
+      "probability": 0.3333164874732356,
+      "reference_probability": 0.3333164874732356,
+      "probability_abs_diff": 0.0,
+      "pass": true,
+      "case": "hard"
+    }
+  ]
+}
