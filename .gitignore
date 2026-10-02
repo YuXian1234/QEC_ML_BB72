@@ -24,7 +24,6 @@ dist/
 .vscode/
 
 # Logs
-materials/
 deep_research/
 *.log
 weight6_logical_supports.md
