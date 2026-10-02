@@ -24,10 +24,11 @@ dist/
 .vscode/
 
 # Logs
+materials/
+deep_research/
 *.log
 weight6_logical_supports.md
 gpu_test.py
 bp_osd_baseline_comparison.md
 decoder_run_comparison.md
-.claude
 .codex
