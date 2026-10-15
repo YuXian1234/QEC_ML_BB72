@@ -1,0 +1,168 @@
+{
+  "format_version": 1,
+  "created_at_utc": "2026-10-14T16:47:35.191388+00:00",
+  "config_sha256": "b584489dbfdd028a5ab5e831c4f508eee46bc1b6bdf2bd797b90f6c9d82a3b44",
+  "config": {
+    "code": "BB72 [[72,12,6]]",
+    "channel": "iid X, perfect syndrome",
+    "block_layout": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        9,
+        10,
+        11
+      ]
+    ],
+    "p_grid": [
+      0.001,
+      0.002,
+      0.003,
+      0.005,
+      0.007,
+      0.01
+    ],
+    "sources": [
+      "enumerate",
+      "stress",
+      "natural"
+    ],
+    "enum_max_weight": 2,
+    "stress_weights": [
+      3,
+      4,
+      5
+    ],
+    "stress_shots_per_weight": 5000,
+    "natural_shots_per_p": 5000,
+    "seed": 20261014,
+    "split_seed": 20261015,
+    "memory_limit": "50%",
+    "guard_rtol": 1e-12,
+    "max_relative_negative_mass": 1e-10,
+    "max_relative_guard": 1e-08,
+    "profile_sha256": "86ddba8f2db5bfbc5a169b83a5ae5af83017ad7ccb19751d13ca218ddda1ef0f",
+    "production_sha256": {
+      "exact_block_bnb.py": "babdd572d7976ffc24685ee884edd13a1f8ea3c8c55702b97cae1e75c16bccd6",
+      "multi_logical_tensor_network_decoder.py": "58cfd3a1341e440e5325329315ab7dce5776729ad08a1f49fecba76fac4c680f",
+      "run_bb72_easy_hard.py": "2c1a9e4de5830d60aaa81f37943758fbfdd7c210ebb998f8a931900894f77e57"
+    },
+    "sampling_sha256": {
+      "sample_bb72_dataset.py": "325a54ee3a0d8b5b8187eb14e8928eaebb707544f8eb49290f16330caf27451d",
+      "sampling_utils.py": "d2c294db0244d02f52e45dad349bdab441f75c4b266f83ff2cd3d1192f2eded7"
+    },
+    "qldpc_version": "0.3.3",
+    "sampling_numpy_version": "2.4.6",
+    "quality_policy_version": 2,
+    "probability_boundary_atol": 1e-12
+  },
+  "matrices_sha256": "9cc57d371593145d9bcdf7562cb1f483a23463fbaac3c5b7a8d55f01d06ee67e",
+  "profile_at_creation": "/home/users/astar/ihpc/youjb/tn_decoder/exact_bnb/v0.5_p0/profiles/best_93.pkl",
+  "profile_metadata": {
+    "code": "BB72 [[72,12,6]]",
+    "p": 0.005,
+    "memory_limit": "50%",
+    "easy_syndrome": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "optimization": "v0.5.2 deep fixed-easy-syndrome path search",
+    "structure": "93",
+    "block_size": 9,
+    "logical_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "bnb_topologies": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        9,
+        10,
+        11
+      ]
+    ],
+    "canonical_bnb_topologies": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        9,
+        10,
+        11
+      ]
+    ]
+  },
+  "production_at_creation": "/home/users/astar/ihpc/youjb/tn_decoder/exact_bnb/v0.5_p0",
+  "sector_index_convention": "sum(lambda_i * 2**i); lambda_0 is first"
+}

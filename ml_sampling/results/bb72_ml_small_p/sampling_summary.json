@@ -1,0 +1,34 @@
+{
+  "generated_error_records": 47629,
+  "generation_complete": true,
+  "unique_syndromes": 17662,
+  "selected_syndromes": 17662,
+  "expected_label_tasks": 105972,
+  "valid_labels": 104080,
+  "review_labels": 1882,
+  "probability_boundary_corrected_labels": 1,
+  "failed_tasks": 10,
+  "pending_tasks": 0,
+  "remaining_nonvalid_tasks": 1892,
+  "success": false,
+  "validation_passed": false,
+  "source_record_counts": {
+    "enumerate": 2629,
+    "natural": 30000,
+    "stress": 15000
+  },
+  "p_grid": [
+    0.001,
+    0.002,
+    0.003,
+    0.005,
+    0.007,
+    0.01
+  ],
+  "median_decode_seconds": 0.14912576251663268,
+  "total_decode_seconds": 16266.578134479409,
+  "updated_at_utc": "2026-10-15T11:35:49.689902+00:00",
+  "config_sha256": "b584489dbfdd028a5ab5e831c4f508eee46bc1b6bdf2bd797b90f6c9d82a3b44",
+  "exported_ml_rows": 104080,
+  "export_includes_review": false
+}

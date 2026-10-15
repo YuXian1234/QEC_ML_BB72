@@ -1,0 +1,1126 @@
+===== ENVIRONMENT / GPU CHECK =====
+Thu Oct 15 08:21:29 +08 2026
+x1000c0s5b0n1
+/home/users/astar/ihpc/youjb/tn_decoder/exact_bnb/ml_sampling
+PBS_JOBID=25820233.pbs101
+CUDA_VISIBLE_DEVICES=GPU-7c579e25-824c-6368-a8a5-4734f95d30b7
+/home/users/astar/ihpc/youjb/miniconda3/envs/cudaqx-qec/bin/python
+/home/users/astar/ihpc/youjb/miniconda3/envs/cudaqx-qec/bin/python
+Thu Oct 15 08:21:30 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:03:00.0 Off |                    0 |
+| N/A   46C    P0             56W /  400W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+torch= 2.10.0+cu128
+torch_cuda= 12.8
+cuda_available= True
+gpu_count= 1
+gpu0= NVIDIA A100-SXM4-40GB
+===== START BB72 ML SAMPLING =====
+output_dir=results/bb72_ml_small_p max_syndromes=all profile=../v0.5_p0/profiles/best_93.pkl
+continue_on_error=1 retry_failed=0
+profile=/home/users/astar/ihpc/youjb/tn_decoder/exact_bnb/v0.5_p0/profiles/best_93.pkl
+profile_sha256=86ddba8f2db5bfbc5a169b83a5ae5af83017ad7ccb19751d13ca218ddda1ef0f
+recovered_tasks=0
+{
+  "generated_error_records": 47629,
+  "generation_complete": true,
+  "unique_syndromes": 17662,
+  "selected_syndromes": 17662,
+  "expected_label_tasks": 105972,
+  "valid_labels": 8799,
+  "review_labels": 66,
+  "probability_boundary_corrected_labels": 1,
+  "failed_tasks": 1,
+  "pending_tasks": 97106,
+  "remaining_nonvalid_tasks": 97173,
+  "success": false,
+  "validation_passed": false,
+  "source_record_counts": {
+    "enumerate": 2629,
+    "natural": 30000,
+    "stress": 15000
+  },
+  "p_grid": [
+    0.001,
+    0.002,
+    0.003,
+    0.005,
+    0.007,
+    0.01
+  ],
+  "median_decode_seconds": 0.14785150499665178,
+  "total_decode_seconds": 1328.2067476137308,
+  "updated_at_utc": "2026-10-15T00:23:03.745799+00:00",
+  "config_sha256": "b584489dbfdd028a5ab5e831c4f508eee46bc1b6bdf2bd797b90f6c9d82a3b44"
+}
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+preflight=PASS device=NVIDIA A100-SXM4-40GB
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=1 syndrome_id=8867 p=0.001 status=done
+labeled=2 syndrome_id=8868 p=0.001 status=done
+labeled=3 syndrome_id=8869 p=0.001 status=done
+labeled=4 syndrome_id=8870 p=0.001 status=done
+labeled=5 syndrome_id=8871 p=0.001 status=done
+labeled=100 syndrome_id=8966 p=0.001 status=done
+labeled=200 syndrome_id=9066 p=0.001 status=done
+labeled=300 syndrome_id=9166 p=0.001 status=done
+labeled=400 syndrome_id=9266 p=0.001 status=done
+labeled=500 syndrome_id=9366 p=0.001 status=done
+labeled=600 syndrome_id=9466 p=0.001 status=done
+labeled=700 syndrome_id=9566 p=0.001 status=done
+labeled=800 syndrome_id=9666 p=0.001 status=review
+labeled=900 syndrome_id=9766 p=0.001 status=done
+labeled=1000 syndrome_id=9866 p=0.001 status=done
+labeled=1100 syndrome_id=9966 p=0.001 status=done
+labeled=1200 syndrome_id=10066 p=0.001 status=done
+labeled=1300 syndrome_id=10166 p=0.001 status=done
+labeled=1400 syndrome_id=10266 p=0.001 status=done
+labeled=1500 syndrome_id=10366 p=0.001 status=done
+labeled=1600 syndrome_id=10466 p=0.001 status=done
+labeled=1700 syndrome_id=10566 p=0.001 status=done
+labeled=1800 syndrome_id=10666 p=0.001 status=done
+labeled=1900 syndrome_id=10766 p=0.001 status=done
+labeled=2000 syndrome_id=10866 p=0.001 status=done
+labeled=2100 syndrome_id=10966 p=0.001 status=done
+labeled=2200 syndrome_id=11066 p=0.001 status=done
+labeled=2300 syndrome_id=11166 p=0.001 status=done
+labeled=2400 syndrome_id=11266 p=0.001 status=done
+labeled=2500 syndrome_id=11366 p=0.001 status=done
+labeled=2600 syndrome_id=11466 p=0.001 status=done
+labeled=2700 syndrome_id=11566 p=0.001 status=done
+labeled=2800 syndrome_id=11666 p=0.001 status=done
+labeled=2900 syndrome_id=11766 p=0.001 status=done
+labeled=3000 syndrome_id=11866 p=0.001 status=done
+labeled=3100 syndrome_id=11966 p=0.001 status=done
+FAILED syndrome_id=12004 p=0.001: negative subtree mass -0.0005829784760104891 at (np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(0), np.int64(1)) exceeds abort tolerance 0.0002629636619713408; root mass=262.96366197134085
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=3200 syndrome_id=12066 p=0.001 status=done
+labeled=3300 syndrome_id=12166 p=0.001 status=done
+labeled=3400 syndrome_id=12266 p=0.001 status=done
+FAILED syndrome_id=12348 p=0.001: negative subtree mass -0.0002933929939401316 at (np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(1)) exceeds abort tolerance 0.0002629631556920141; root mass=262.9631556920141
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=3500 syndrome_id=12366 p=0.001 status=review
+labeled=3600 syndrome_id=12466 p=0.001 status=done
+labeled=3700 syndrome_id=12566 p=0.001 status=done
+labeled=3800 syndrome_id=12666 p=0.001 status=done
+labeled=3900 syndrome_id=12766 p=0.001 status=done
+labeled=4000 syndrome_id=12866 p=0.001 status=done
+labeled=4100 syndrome_id=12966 p=0.001 status=done
+FAILED syndrome_id=13031 p=0.001: negative subtree mass -1.414686779418219e-06 at (np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(0)) exceeds abort tolerance 5.264596009898833e-07; root mass=0.5264596009898833
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=4200 syndrome_id=13066 p=0.001 status=done
+labeled=4300 syndrome_id=13166 p=0.001 status=done
+labeled=4400 syndrome_id=13266 p=0.001 status=done
+labeled=4500 syndrome_id=13366 p=0.001 status=done
+labeled=4600 syndrome_id=13466 p=0.001 status=review
+labeled=4700 syndrome_id=13566 p=0.001 status=done
+FAILED syndrome_id=13570 p=0.001: negative subtree mass -3.3816250133961164e-07 at (np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(1)) exceeds abort tolerance 2.6322879544645654e-07; root mass=0.26322879544645655
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=4800 syndrome_id=13666 p=0.001 status=done
+labeled=4900 syndrome_id=13766 p=0.001 status=done
+labeled=5000 syndrome_id=13866 p=0.001 status=review
+labeled=5100 syndrome_id=13966 p=0.001 status=done
+labeled=5200 syndrome_id=14066 p=0.001 status=review
+labeled=5300 syndrome_id=14166 p=0.001 status=done
+labeled=5400 syndrome_id=14266 p=0.001 status=done
+FAILED syndrome_id=14319 p=0.001: negative subtree mass -1.351889503663606e-05 at (np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(0)) exceeds abort tolerance 1.5793389642455707e-06; root mass=1.5793389642455709
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=5500 syndrome_id=14366 p=0.001 status=done
+labeled=5600 syndrome_id=14466 p=0.001 status=done
+labeled=5700 syndrome_id=14566 p=0.001 status=done
+labeled=5800 syndrome_id=14666 p=0.001 status=review
+labeled=5900 syndrome_id=14766 p=0.001 status=done
+FAILED syndrome_id=14849 p=0.001: negative subtree mass -4.118651744608793e-06 at (np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0), np.int64(0)) exceeds abort tolerance 3.6851649797615097e-06; root mass=3.68516497976151
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=6000 syndrome_id=14866 p=0.001 status=done
+labeled=6100 syndrome_id=14966 p=0.001 status=done
+labeled=6200 syndrome_id=15066 p=0.001 status=done
+labeled=6300 syndrome_id=15166 p=0.001 status=review
+labeled=6400 syndrome_id=15266 p=0.001 status=done
+labeled=6500 syndrome_id=15366 p=0.001 status=review
+labeled=6600 syndrome_id=15466 p=0.001 status=done
+labeled=6700 syndrome_id=15566 p=0.001 status=review
+labeled=6800 syndrome_id=15666 p=0.001 status=done
+labeled=6900 syndrome_id=15766 p=0.001 status=done
+FAILED syndrome_id=15767 p=0.001: negative subtree mass -2.4299339115713116e-05 at (np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(1)) exceeds abort tolerance 7.897052015976122e-07; root mass=0.7897052015976123
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=7000 syndrome_id=15866 p=0.001 status=done
+labeled=7100 syndrome_id=15966 p=0.001 status=done
+labeled=7200 syndrome_id=16066 p=0.001 status=done
+labeled=7300 syndrome_id=16166 p=0.001 status=review
+labeled=7400 syndrome_id=16266 p=0.001 status=done
+FAILED syndrome_id=16274 p=0.001: negative subtree mass -1.3486144338221984e-05 at (np.int64(1), np.int64(1), np.int64(1)) exceeds abort tolerance 5.264622596934416e-07; root mass=0.5264622596934416
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=7500 syndrome_id=16366 p=0.001 status=done
+labeled=7600 syndrome_id=16466 p=0.001 status=done
+labeled=7700 syndrome_id=16566 p=0.001 status=done
+labeled=7800 syndrome_id=16666 p=0.001 status=done
+labeled=7900 syndrome_id=16766 p=0.001 status=review
+labeled=8000 syndrome_id=16866 p=0.001 status=done
+FAILED syndrome_id=16961 p=0.001: negative subtree mass -2.974712197616752e-07 at (np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(1)) exceeds abort tolerance 2.6323372379440363e-07; root mass=0.26323372379440363
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=8100 syndrome_id=16966 p=0.001 status=done
+labeled=8200 syndrome_id=17066 p=0.001 status=done
+labeled=8300 syndrome_id=17166 p=0.001 status=done
+labeled=8400 syndrome_id=17266 p=0.001 status=done
+labeled=8500 syndrome_id=17366 p=0.001 status=done
+labeled=8600 syndrome_id=17466 p=0.001 status=done
+labeled=8700 syndrome_id=17566 p=0.001 status=done
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=8800 syndrome_id=4 p=0.002 status=done
+labeled=8900 syndrome_id=104 p=0.002 status=done
+labeled=9000 syndrome_id=204 p=0.002 status=done
+labeled=9100 syndrome_id=304 p=0.002 status=done
+labeled=9200 syndrome_id=404 p=0.002 status=done
+labeled=9300 syndrome_id=504 p=0.002 status=done
+labeled=9400 syndrome_id=604 p=0.002 status=done
+labeled=9500 syndrome_id=704 p=0.002 status=done
+labeled=9600 syndrome_id=804 p=0.002 status=done
+labeled=9700 syndrome_id=904 p=0.002 status=done
+labeled=9800 syndrome_id=1004 p=0.002 status=done
+labeled=9900 syndrome_id=1104 p=0.002 status=done
+labeled=10000 syndrome_id=1204 p=0.002 status=done
+labeled=10100 syndrome_id=1304 p=0.002 status=done
+labeled=10200 syndrome_id=1404 p=0.002 status=done
+labeled=10300 syndrome_id=1504 p=0.002 status=done
+labeled=10400 syndrome_id=1604 p=0.002 status=done
+labeled=10500 syndrome_id=1704 p=0.002 status=done
+labeled=10600 syndrome_id=1804 p=0.002 status=done
+labeled=10700 syndrome_id=1904 p=0.002 status=done
+labeled=10800 syndrome_id=2004 p=0.002 status=done
+labeled=10900 syndrome_id=2104 p=0.002 status=done
+labeled=11000 syndrome_id=2204 p=0.002 status=done
+labeled=11100 syndrome_id=2304 p=0.002 status=done
+labeled=11200 syndrome_id=2404 p=0.002 status=done
+labeled=11300 syndrome_id=2504 p=0.002 status=done
+labeled=11400 syndrome_id=2604 p=0.002 status=done
+labeled=11500 syndrome_id=2704 p=0.002 status=done
+labeled=11600 syndrome_id=2804 p=0.002 status=done
+labeled=11700 syndrome_id=2904 p=0.002 status=done
+labeled=11800 syndrome_id=3004 p=0.002 status=done
+labeled=11900 syndrome_id=3104 p=0.002 status=done
+labeled=12000 syndrome_id=3204 p=0.002 status=done
+labeled=12100 syndrome_id=3304 p=0.002 status=done
+labeled=12200 syndrome_id=3404 p=0.002 status=done
+labeled=12300 syndrome_id=3504 p=0.002 status=done
+labeled=12400 syndrome_id=3604 p=0.002 status=done
+labeled=12500 syndrome_id=3704 p=0.002 status=done
+labeled=12600 syndrome_id=3804 p=0.002 status=done
+labeled=12700 syndrome_id=3904 p=0.002 status=done
+labeled=12800 syndrome_id=4004 p=0.002 status=done
+labeled=12900 syndrome_id=4104 p=0.002 status=done
+labeled=13000 syndrome_id=4204 p=0.002 status=done
+labeled=13100 syndrome_id=4304 p=0.002 status=done
+labeled=13200 syndrome_id=4404 p=0.002 status=done
+labeled=13300 syndrome_id=4504 p=0.002 status=done
+labeled=13400 syndrome_id=4604 p=0.002 status=done
+labeled=13500 syndrome_id=4704 p=0.002 status=done
+labeled=13600 syndrome_id=4804 p=0.002 status=done
+labeled=13700 syndrome_id=4904 p=0.002 status=done
+labeled=13800 syndrome_id=5004 p=0.002 status=done
+labeled=13900 syndrome_id=5104 p=0.002 status=done
+labeled=14000 syndrome_id=5204 p=0.002 status=done
+labeled=14100 syndrome_id=5304 p=0.002 status=done
+labeled=14200 syndrome_id=5404 p=0.002 status=done
+labeled=14300 syndrome_id=5504 p=0.002 status=done
+labeled=14400 syndrome_id=5604 p=0.002 status=done
+labeled=14500 syndrome_id=5704 p=0.002 status=done
+labeled=14600 syndrome_id=5804 p=0.002 status=done
+labeled=14700 syndrome_id=5904 p=0.002 status=done
+labeled=14800 syndrome_id=6004 p=0.002 status=done
+labeled=14900 syndrome_id=6104 p=0.002 status=done
+labeled=15000 syndrome_id=6204 p=0.002 status=done
+labeled=15100 syndrome_id=6304 p=0.002 status=done
+labeled=15200 syndrome_id=6404 p=0.002 status=done
+labeled=15300 syndrome_id=6504 p=0.002 status=done
+labeled=15400 syndrome_id=6604 p=0.002 status=done
+labeled=15500 syndrome_id=6704 p=0.002 status=done
+labeled=15600 syndrome_id=6804 p=0.002 status=done
+labeled=15700 syndrome_id=6904 p=0.002 status=done
+labeled=15800 syndrome_id=7004 p=0.002 status=done
+labeled=15900 syndrome_id=7104 p=0.002 status=done
+labeled=16000 syndrome_id=7204 p=0.002 status=done
+labeled=16100 syndrome_id=7304 p=0.002 status=done
+labeled=16200 syndrome_id=7404 p=0.002 status=done
+labeled=16300 syndrome_id=7504 p=0.002 status=done
+labeled=16400 syndrome_id=7604 p=0.002 status=done
+labeled=16500 syndrome_id=7704 p=0.002 status=done
+labeled=16600 syndrome_id=7804 p=0.002 status=done
+labeled=16700 syndrome_id=7904 p=0.002 status=done
+labeled=16800 syndrome_id=8004 p=0.002 status=done
+labeled=16900 syndrome_id=8104 p=0.002 status=done
+labeled=17000 syndrome_id=8204 p=0.002 status=done
+labeled=17100 syndrome_id=8304 p=0.002 status=done
+labeled=17200 syndrome_id=8404 p=0.002 status=done
+labeled=17300 syndrome_id=8504 p=0.002 status=done
+labeled=17400 syndrome_id=8604 p=0.002 status=done
+labeled=17500 syndrome_id=8704 p=0.002 status=done
+labeled=17600 syndrome_id=8804 p=0.002 status=done
+labeled=17700 syndrome_id=8904 p=0.002 status=done
+labeled=17800 syndrome_id=9004 p=0.002 status=done
+labeled=17900 syndrome_id=9104 p=0.002 status=done
+labeled=18000 syndrome_id=9204 p=0.002 status=done
+labeled=18100 syndrome_id=9304 p=0.002 status=done
+labeled=18200 syndrome_id=9404 p=0.002 status=done
+labeled=18300 syndrome_id=9504 p=0.002 status=done
+labeled=18400 syndrome_id=9604 p=0.002 status=done
+labeled=18500 syndrome_id=9704 p=0.002 status=done
+labeled=18600 syndrome_id=9804 p=0.002 status=done
+labeled=18700 syndrome_id=9904 p=0.002 status=done
+labeled=18800 syndrome_id=10004 p=0.002 status=done
+labeled=18900 syndrome_id=10104 p=0.002 status=done
+labeled=19000 syndrome_id=10204 p=0.002 status=done
+labeled=19100 syndrome_id=10304 p=0.002 status=done
+labeled=19200 syndrome_id=10404 p=0.002 status=done
+labeled=19300 syndrome_id=10504 p=0.002 status=done
+labeled=19400 syndrome_id=10604 p=0.002 status=done
+labeled=19500 syndrome_id=10704 p=0.002 status=done
+labeled=19600 syndrome_id=10804 p=0.002 status=done
+labeled=19700 syndrome_id=10904 p=0.002 status=review
+labeled=19800 syndrome_id=11004 p=0.002 status=done
+labeled=19900 syndrome_id=11104 p=0.002 status=done
+labeled=20000 syndrome_id=11204 p=0.002 status=done
+labeled=20100 syndrome_id=11304 p=0.002 status=done
+labeled=20200 syndrome_id=11404 p=0.002 status=done
+labeled=20300 syndrome_id=11504 p=0.002 status=done
+labeled=20400 syndrome_id=11604 p=0.002 status=done
+labeled=20500 syndrome_id=11704 p=0.002 status=done
+labeled=20600 syndrome_id=11804 p=0.002 status=done
+labeled=20700 syndrome_id=11904 p=0.002 status=done
+labeled=20800 syndrome_id=12004 p=0.002 status=review
+labeled=20900 syndrome_id=12104 p=0.002 status=done
+labeled=21000 syndrome_id=12204 p=0.002 status=done
+labeled=21100 syndrome_id=12304 p=0.002 status=done
+labeled=21200 syndrome_id=12404 p=0.002 status=done
+labeled=21300 syndrome_id=12504 p=0.002 status=done
+labeled=21400 syndrome_id=12604 p=0.002 status=review
+labeled=21500 syndrome_id=12704 p=0.002 status=done
+labeled=21600 syndrome_id=12804 p=0.002 status=done
+labeled=21700 syndrome_id=12904 p=0.002 status=done
+labeled=21800 syndrome_id=13004 p=0.002 status=done
+labeled=21900 syndrome_id=13104 p=0.002 status=done
+labeled=22000 syndrome_id=13204 p=0.002 status=done
+labeled=22100 syndrome_id=13304 p=0.002 status=done
+labeled=22200 syndrome_id=13404 p=0.002 status=done
+labeled=22300 syndrome_id=13504 p=0.002 status=done
+labeled=22400 syndrome_id=13604 p=0.002 status=done
+labeled=22500 syndrome_id=13704 p=0.002 status=done
+labeled=22600 syndrome_id=13804 p=0.002 status=done
+labeled=22700 syndrome_id=13904 p=0.002 status=done
+labeled=22800 syndrome_id=14004 p=0.002 status=done
+labeled=22900 syndrome_id=14104 p=0.002 status=done
+labeled=23000 syndrome_id=14204 p=0.002 status=done
+labeled=23100 syndrome_id=14304 p=0.002 status=done
+labeled=23200 syndrome_id=14404 p=0.002 status=done
+labeled=23300 syndrome_id=14504 p=0.002 status=done
+labeled=23400 syndrome_id=14604 p=0.002 status=done
+labeled=23500 syndrome_id=14704 p=0.002 status=done
+labeled=23600 syndrome_id=14804 p=0.002 status=done
+labeled=23700 syndrome_id=14904 p=0.002 status=done
+labeled=23800 syndrome_id=15004 p=0.002 status=done
+labeled=23900 syndrome_id=15104 p=0.002 status=done
+labeled=24000 syndrome_id=15204 p=0.002 status=done
+labeled=24100 syndrome_id=15304 p=0.002 status=done
+labeled=24200 syndrome_id=15404 p=0.002 status=done
+labeled=24300 syndrome_id=15504 p=0.002 status=done
+labeled=24400 syndrome_id=15604 p=0.002 status=done
+labeled=24500 syndrome_id=15704 p=0.002 status=done
+labeled=24600 syndrome_id=15804 p=0.002 status=done
+labeled=24700 syndrome_id=15904 p=0.002 status=done
+labeled=24800 syndrome_id=16004 p=0.002 status=review
+labeled=24900 syndrome_id=16104 p=0.002 status=done
+labeled=25000 syndrome_id=16204 p=0.002 status=done
+labeled=25100 syndrome_id=16304 p=0.002 status=done
+labeled=25200 syndrome_id=16404 p=0.002 status=done
+labeled=25300 syndrome_id=16504 p=0.002 status=done
+labeled=25400 syndrome_id=16604 p=0.002 status=done
+labeled=25500 syndrome_id=16704 p=0.002 status=done
+labeled=25600 syndrome_id=16804 p=0.002 status=done
+labeled=25700 syndrome_id=16904 p=0.002 status=done
+labeled=25800 syndrome_id=17004 p=0.002 status=done
+labeled=25900 syndrome_id=17104 p=0.002 status=done
+labeled=26000 syndrome_id=17204 p=0.002 status=done
+labeled=26100 syndrome_id=17304 p=0.002 status=done
+labeled=26200 syndrome_id=17404 p=0.002 status=done
+labeled=26300 syndrome_id=17504 p=0.002 status=done
+labeled=26400 syndrome_id=17604 p=0.002 status=done
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=26500 syndrome_id=42 p=0.003 status=done
+labeled=26600 syndrome_id=142 p=0.003 status=done
+labeled=26700 syndrome_id=242 p=0.003 status=done
+labeled=26800 syndrome_id=342 p=0.003 status=done
+labeled=26900 syndrome_id=442 p=0.003 status=done
+labeled=27000 syndrome_id=542 p=0.003 status=done
+labeled=27100 syndrome_id=642 p=0.003 status=done
+labeled=27200 syndrome_id=742 p=0.003 status=done
+labeled=27300 syndrome_id=842 p=0.003 status=done
+labeled=27400 syndrome_id=942 p=0.003 status=done
+labeled=27500 syndrome_id=1042 p=0.003 status=done
+labeled=27600 syndrome_id=1142 p=0.003 status=done
+labeled=27700 syndrome_id=1242 p=0.003 status=done
+labeled=27800 syndrome_id=1342 p=0.003 status=done
+labeled=27900 syndrome_id=1442 p=0.003 status=done
+labeled=28000 syndrome_id=1542 p=0.003 status=done
+labeled=28100 syndrome_id=1642 p=0.003 status=done
+labeled=28200 syndrome_id=1742 p=0.003 status=done
+labeled=28300 syndrome_id=1842 p=0.003 status=done
+labeled=28400 syndrome_id=1942 p=0.003 status=done
+labeled=28500 syndrome_id=2042 p=0.003 status=done
+labeled=28600 syndrome_id=2142 p=0.003 status=done
+labeled=28700 syndrome_id=2242 p=0.003 status=done
+labeled=28800 syndrome_id=2342 p=0.003 status=done
+labeled=28900 syndrome_id=2442 p=0.003 status=done
+labeled=29000 syndrome_id=2542 p=0.003 status=done
+labeled=29100 syndrome_id=2642 p=0.003 status=done
+labeled=29200 syndrome_id=2742 p=0.003 status=done
+labeled=29300 syndrome_id=2842 p=0.003 status=done
+labeled=29400 syndrome_id=2942 p=0.003 status=done
+labeled=29500 syndrome_id=3042 p=0.003 status=done
+labeled=29600 syndrome_id=3142 p=0.003 status=done
+labeled=29700 syndrome_id=3242 p=0.003 status=done
+labeled=29800 syndrome_id=3342 p=0.003 status=done
+labeled=29900 syndrome_id=3442 p=0.003 status=done
+labeled=30000 syndrome_id=3542 p=0.003 status=done
+labeled=30100 syndrome_id=3642 p=0.003 status=done
+labeled=30200 syndrome_id=3742 p=0.003 status=done
+labeled=30300 syndrome_id=3842 p=0.003 status=done
+labeled=30400 syndrome_id=3942 p=0.003 status=done
+labeled=30500 syndrome_id=4042 p=0.003 status=done
+labeled=30600 syndrome_id=4142 p=0.003 status=done
+labeled=30700 syndrome_id=4242 p=0.003 status=done
+labeled=30800 syndrome_id=4342 p=0.003 status=done
+labeled=30900 syndrome_id=4442 p=0.003 status=done
+labeled=31000 syndrome_id=4542 p=0.003 status=done
+labeled=31100 syndrome_id=4642 p=0.003 status=done
+labeled=31200 syndrome_id=4742 p=0.003 status=done
+labeled=31300 syndrome_id=4842 p=0.003 status=done
+labeled=31400 syndrome_id=4942 p=0.003 status=done
+labeled=31500 syndrome_id=5042 p=0.003 status=done
+labeled=31600 syndrome_id=5142 p=0.003 status=done
+labeled=31700 syndrome_id=5242 p=0.003 status=done
+labeled=31800 syndrome_id=5342 p=0.003 status=done
+labeled=31900 syndrome_id=5442 p=0.003 status=done
+labeled=32000 syndrome_id=5542 p=0.003 status=done
+labeled=32100 syndrome_id=5642 p=0.003 status=done
+labeled=32200 syndrome_id=5742 p=0.003 status=done
+labeled=32300 syndrome_id=5842 p=0.003 status=done
+labeled=32400 syndrome_id=5942 p=0.003 status=done
+labeled=32500 syndrome_id=6042 p=0.003 status=done
+labeled=32600 syndrome_id=6142 p=0.003 status=done
+labeled=32700 syndrome_id=6242 p=0.003 status=done
+labeled=32800 syndrome_id=6342 p=0.003 status=done
+labeled=32900 syndrome_id=6442 p=0.003 status=done
+labeled=33000 syndrome_id=6542 p=0.003 status=done
+labeled=33100 syndrome_id=6642 p=0.003 status=done
+labeled=33200 syndrome_id=6742 p=0.003 status=done
+labeled=33300 syndrome_id=6842 p=0.003 status=done
+labeled=33400 syndrome_id=6942 p=0.003 status=done
+labeled=33500 syndrome_id=7042 p=0.003 status=done
+labeled=33600 syndrome_id=7142 p=0.003 status=done
+labeled=33700 syndrome_id=7242 p=0.003 status=done
+labeled=33800 syndrome_id=7342 p=0.003 status=done
+labeled=33900 syndrome_id=7442 p=0.003 status=done
+labeled=34000 syndrome_id=7542 p=0.003 status=done
+labeled=34100 syndrome_id=7642 p=0.003 status=done
+labeled=34200 syndrome_id=7742 p=0.003 status=done
+labeled=34300 syndrome_id=7842 p=0.003 status=done
+labeled=34400 syndrome_id=7942 p=0.003 status=done
+labeled=34500 syndrome_id=8042 p=0.003 status=done
+labeled=34600 syndrome_id=8142 p=0.003 status=done
+labeled=34700 syndrome_id=8242 p=0.003 status=done
+labeled=34800 syndrome_id=8342 p=0.003 status=done
+labeled=34900 syndrome_id=8442 p=0.003 status=done
+labeled=35000 syndrome_id=8542 p=0.003 status=done
+labeled=35100 syndrome_id=8642 p=0.003 status=done
+labeled=35200 syndrome_id=8742 p=0.003 status=done
+labeled=35300 syndrome_id=8842 p=0.003 status=done
+labeled=35400 syndrome_id=8942 p=0.003 status=done
+labeled=35500 syndrome_id=9042 p=0.003 status=done
+labeled=35600 syndrome_id=9142 p=0.003 status=done
+labeled=35700 syndrome_id=9242 p=0.003 status=done
+labeled=35800 syndrome_id=9342 p=0.003 status=done
+labeled=35900 syndrome_id=9442 p=0.003 status=done
+labeled=36000 syndrome_id=9542 p=0.003 status=done
+labeled=36100 syndrome_id=9642 p=0.003 status=done
+labeled=36200 syndrome_id=9742 p=0.003 status=done
+labeled=36300 syndrome_id=9842 p=0.003 status=done
+labeled=36400 syndrome_id=9942 p=0.003 status=done
+labeled=36500 syndrome_id=10042 p=0.003 status=done
+labeled=36600 syndrome_id=10142 p=0.003 status=done
+labeled=36700 syndrome_id=10242 p=0.003 status=done
+labeled=36800 syndrome_id=10342 p=0.003 status=done
+labeled=36900 syndrome_id=10442 p=0.003 status=done
+labeled=37000 syndrome_id=10542 p=0.003 status=done
+labeled=37100 syndrome_id=10642 p=0.003 status=done
+labeled=37200 syndrome_id=10742 p=0.003 status=done
+labeled=37300 syndrome_id=10842 p=0.003 status=done
+labeled=37400 syndrome_id=10942 p=0.003 status=done
+labeled=37500 syndrome_id=11042 p=0.003 status=done
+labeled=37600 syndrome_id=11142 p=0.003 status=done
+labeled=37700 syndrome_id=11242 p=0.003 status=done
+labeled=37800 syndrome_id=11342 p=0.003 status=done
+labeled=37900 syndrome_id=11442 p=0.003 status=done
+labeled=38000 syndrome_id=11542 p=0.003 status=done
+labeled=38100 syndrome_id=11642 p=0.003 status=done
+labeled=38200 syndrome_id=11742 p=0.003 status=done
+labeled=38300 syndrome_id=11842 p=0.003 status=done
+labeled=38400 syndrome_id=11942 p=0.003 status=done
+labeled=38500 syndrome_id=12042 p=0.003 status=done
+labeled=38600 syndrome_id=12142 p=0.003 status=done
+labeled=38700 syndrome_id=12242 p=0.003 status=done
+labeled=38800 syndrome_id=12342 p=0.003 status=done
+labeled=38900 syndrome_id=12442 p=0.003 status=done
+labeled=39000 syndrome_id=12542 p=0.003 status=done
+labeled=39100 syndrome_id=12642 p=0.003 status=done
+labeled=39200 syndrome_id=12742 p=0.003 status=done
+labeled=39300 syndrome_id=12842 p=0.003 status=done
+labeled=39400 syndrome_id=12942 p=0.003 status=done
+labeled=39500 syndrome_id=13042 p=0.003 status=done
+labeled=39600 syndrome_id=13142 p=0.003 status=done
+labeled=39700 syndrome_id=13242 p=0.003 status=done
+labeled=39800 syndrome_id=13342 p=0.003 status=done
+labeled=39900 syndrome_id=13442 p=0.003 status=done
+labeled=40000 syndrome_id=13542 p=0.003 status=done
+labeled=40100 syndrome_id=13642 p=0.003 status=done
+labeled=40200 syndrome_id=13742 p=0.003 status=done
+labeled=40300 syndrome_id=13842 p=0.003 status=done
+labeled=40400 syndrome_id=13942 p=0.003 status=done
+labeled=40500 syndrome_id=14042 p=0.003 status=done
+labeled=40600 syndrome_id=14142 p=0.003 status=done
+labeled=40700 syndrome_id=14242 p=0.003 status=done
+labeled=40800 syndrome_id=14342 p=0.003 status=done
+labeled=40900 syndrome_id=14442 p=0.003 status=done
+labeled=41000 syndrome_id=14542 p=0.003 status=done
+labeled=41100 syndrome_id=14642 p=0.003 status=done
+labeled=41200 syndrome_id=14742 p=0.003 status=done
+labeled=41300 syndrome_id=14842 p=0.003 status=done
+labeled=41400 syndrome_id=14942 p=0.003 status=done
+labeled=41500 syndrome_id=15042 p=0.003 status=done
+labeled=41600 syndrome_id=15142 p=0.003 status=done
+labeled=41700 syndrome_id=15242 p=0.003 status=done
+labeled=41800 syndrome_id=15342 p=0.003 status=done
+labeled=41900 syndrome_id=15442 p=0.003 status=done
+labeled=42000 syndrome_id=15542 p=0.003 status=done
+labeled=42100 syndrome_id=15642 p=0.003 status=done
+labeled=42200 syndrome_id=15742 p=0.003 status=done
+labeled=42300 syndrome_id=15842 p=0.003 status=done
+labeled=42400 syndrome_id=15942 p=0.003 status=done
+labeled=42500 syndrome_id=16042 p=0.003 status=done
+labeled=42600 syndrome_id=16142 p=0.003 status=done
+labeled=42700 syndrome_id=16242 p=0.003 status=done
+labeled=42800 syndrome_id=16342 p=0.003 status=done
+labeled=42900 syndrome_id=16442 p=0.003 status=done
+labeled=43000 syndrome_id=16542 p=0.003 status=done
+labeled=43100 syndrome_id=16642 p=0.003 status=done
+labeled=43200 syndrome_id=16742 p=0.003 status=done
+labeled=43300 syndrome_id=16842 p=0.003 status=done
+labeled=43400 syndrome_id=16942 p=0.003 status=done
+labeled=43500 syndrome_id=17042 p=0.003 status=done
+labeled=43600 syndrome_id=17142 p=0.003 status=done
+labeled=43700 syndrome_id=17242 p=0.003 status=done
+labeled=43800 syndrome_id=17342 p=0.003 status=done
+labeled=43900 syndrome_id=17442 p=0.003 status=done
+labeled=44000 syndrome_id=17542 p=0.003 status=done
+labeled=44100 syndrome_id=17642 p=0.003 status=done
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=44200 syndrome_id=80 p=0.005 status=done
+labeled=44300 syndrome_id=180 p=0.005 status=done
+labeled=44400 syndrome_id=280 p=0.005 status=done
+labeled=44500 syndrome_id=380 p=0.005 status=done
+labeled=44600 syndrome_id=480 p=0.005 status=done
+labeled=44700 syndrome_id=580 p=0.005 status=done
+labeled=44800 syndrome_id=680 p=0.005 status=done
+labeled=44900 syndrome_id=780 p=0.005 status=done
+labeled=45000 syndrome_id=880 p=0.005 status=done
+labeled=45100 syndrome_id=980 p=0.005 status=done
+labeled=45200 syndrome_id=1080 p=0.005 status=done
+labeled=45300 syndrome_id=1180 p=0.005 status=done
+labeled=45400 syndrome_id=1280 p=0.005 status=done
+labeled=45500 syndrome_id=1380 p=0.005 status=done
+labeled=45600 syndrome_id=1480 p=0.005 status=done
+labeled=45700 syndrome_id=1580 p=0.005 status=done
+labeled=45800 syndrome_id=1680 p=0.005 status=done
+labeled=45900 syndrome_id=1780 p=0.005 status=done
+labeled=46000 syndrome_id=1880 p=0.005 status=done
+labeled=46100 syndrome_id=1980 p=0.005 status=done
+labeled=46200 syndrome_id=2080 p=0.005 status=done
+labeled=46300 syndrome_id=2180 p=0.005 status=done
+labeled=46400 syndrome_id=2280 p=0.005 status=done
+labeled=46500 syndrome_id=2380 p=0.005 status=done
+labeled=46600 syndrome_id=2480 p=0.005 status=done
+labeled=46700 syndrome_id=2580 p=0.005 status=done
+labeled=46800 syndrome_id=2680 p=0.005 status=done
+labeled=46900 syndrome_id=2780 p=0.005 status=done
+labeled=47000 syndrome_id=2880 p=0.005 status=done
+labeled=47100 syndrome_id=2980 p=0.005 status=done
+labeled=47200 syndrome_id=3080 p=0.005 status=done
+labeled=47300 syndrome_id=3180 p=0.005 status=done
+labeled=47400 syndrome_id=3280 p=0.005 status=done
+labeled=47500 syndrome_id=3380 p=0.005 status=done
+labeled=47600 syndrome_id=3480 p=0.005 status=done
+labeled=47700 syndrome_id=3580 p=0.005 status=done
+labeled=47800 syndrome_id=3680 p=0.005 status=done
+labeled=47900 syndrome_id=3780 p=0.005 status=done
+labeled=48000 syndrome_id=3880 p=0.005 status=done
+labeled=48100 syndrome_id=3980 p=0.005 status=done
+labeled=48200 syndrome_id=4080 p=0.005 status=done
+labeled=48300 syndrome_id=4180 p=0.005 status=done
+labeled=48400 syndrome_id=4280 p=0.005 status=done
+labeled=48500 syndrome_id=4380 p=0.005 status=done
+labeled=48600 syndrome_id=4480 p=0.005 status=done
+labeled=48700 syndrome_id=4580 p=0.005 status=done
+labeled=48800 syndrome_id=4680 p=0.005 status=done
+labeled=48900 syndrome_id=4780 p=0.005 status=done
+labeled=49000 syndrome_id=4880 p=0.005 status=done
+labeled=49100 syndrome_id=4980 p=0.005 status=done
+labeled=49200 syndrome_id=5080 p=0.005 status=done
+labeled=49300 syndrome_id=5180 p=0.005 status=done
+labeled=49400 syndrome_id=5280 p=0.005 status=done
+labeled=49500 syndrome_id=5380 p=0.005 status=done
+labeled=49600 syndrome_id=5480 p=0.005 status=done
+labeled=49700 syndrome_id=5580 p=0.005 status=done
+labeled=49800 syndrome_id=5680 p=0.005 status=done
+labeled=49900 syndrome_id=5780 p=0.005 status=done
+labeled=50000 syndrome_id=5880 p=0.005 status=done
+labeled=50100 syndrome_id=5980 p=0.005 status=done
+labeled=50200 syndrome_id=6080 p=0.005 status=done
+labeled=50300 syndrome_id=6180 p=0.005 status=done
+labeled=50400 syndrome_id=6280 p=0.005 status=done
+labeled=50500 syndrome_id=6380 p=0.005 status=done
+labeled=50600 syndrome_id=6480 p=0.005 status=done
+labeled=50700 syndrome_id=6580 p=0.005 status=done
+labeled=50800 syndrome_id=6680 p=0.005 status=done
+labeled=50900 syndrome_id=6780 p=0.005 status=done
+labeled=51000 syndrome_id=6880 p=0.005 status=done
+labeled=51100 syndrome_id=6980 p=0.005 status=done
+labeled=51200 syndrome_id=7080 p=0.005 status=done
+labeled=51300 syndrome_id=7180 p=0.005 status=done
+labeled=51400 syndrome_id=7280 p=0.005 status=done
+labeled=51500 syndrome_id=7380 p=0.005 status=done
+labeled=51600 syndrome_id=7480 p=0.005 status=done
+labeled=51700 syndrome_id=7580 p=0.005 status=done
+labeled=51800 syndrome_id=7680 p=0.005 status=done
+labeled=51900 syndrome_id=7780 p=0.005 status=done
+labeled=52000 syndrome_id=7880 p=0.005 status=done
+labeled=52100 syndrome_id=7980 p=0.005 status=done
+labeled=52200 syndrome_id=8080 p=0.005 status=done
+labeled=52300 syndrome_id=8180 p=0.005 status=done
+labeled=52400 syndrome_id=8280 p=0.005 status=done
+labeled=52500 syndrome_id=8380 p=0.005 status=done
+labeled=52600 syndrome_id=8480 p=0.005 status=done
+labeled=52700 syndrome_id=8580 p=0.005 status=done
+labeled=52800 syndrome_id=8680 p=0.005 status=done
+labeled=52900 syndrome_id=8780 p=0.005 status=done
+labeled=53000 syndrome_id=8880 p=0.005 status=done
+labeled=53100 syndrome_id=8980 p=0.005 status=done
+labeled=53200 syndrome_id=9080 p=0.005 status=done
+labeled=53300 syndrome_id=9180 p=0.005 status=done
+labeled=53400 syndrome_id=9280 p=0.005 status=done
+labeled=53500 syndrome_id=9380 p=0.005 status=done
+labeled=53600 syndrome_id=9480 p=0.005 status=done
+labeled=53700 syndrome_id=9580 p=0.005 status=done
+labeled=53800 syndrome_id=9680 p=0.005 status=done
+labeled=53900 syndrome_id=9780 p=0.005 status=done
+labeled=54000 syndrome_id=9880 p=0.005 status=done
+labeled=54100 syndrome_id=9980 p=0.005 status=done
+labeled=54200 syndrome_id=10080 p=0.005 status=done
+labeled=54300 syndrome_id=10180 p=0.005 status=done
+labeled=54400 syndrome_id=10280 p=0.005 status=done
+labeled=54500 syndrome_id=10380 p=0.005 status=done
+labeled=54600 syndrome_id=10480 p=0.005 status=done
+labeled=54700 syndrome_id=10580 p=0.005 status=done
+labeled=54800 syndrome_id=10680 p=0.005 status=done
+labeled=54900 syndrome_id=10780 p=0.005 status=done
+labeled=55000 syndrome_id=10880 p=0.005 status=done
+labeled=55100 syndrome_id=10980 p=0.005 status=review
+labeled=55200 syndrome_id=11080 p=0.005 status=done
+labeled=55300 syndrome_id=11180 p=0.005 status=done
+labeled=55400 syndrome_id=11280 p=0.005 status=done
+labeled=55500 syndrome_id=11380 p=0.005 status=done
+labeled=55600 syndrome_id=11480 p=0.005 status=done
+labeled=55700 syndrome_id=11580 p=0.005 status=done
+labeled=55800 syndrome_id=11680 p=0.005 status=done
+labeled=55900 syndrome_id=11780 p=0.005 status=done
+labeled=56000 syndrome_id=11880 p=0.005 status=done
+labeled=56100 syndrome_id=11980 p=0.005 status=done
+labeled=56200 syndrome_id=12080 p=0.005 status=done
+labeled=56300 syndrome_id=12180 p=0.005 status=done
+labeled=56400 syndrome_id=12280 p=0.005 status=done
+labeled=56500 syndrome_id=12380 p=0.005 status=done
+labeled=56600 syndrome_id=12480 p=0.005 status=done
+labeled=56700 syndrome_id=12580 p=0.005 status=done
+labeled=56800 syndrome_id=12680 p=0.005 status=done
+labeled=56900 syndrome_id=12780 p=0.005 status=done
+labeled=57000 syndrome_id=12880 p=0.005 status=review
+labeled=57100 syndrome_id=12980 p=0.005 status=done
+labeled=57200 syndrome_id=13080 p=0.005 status=done
+labeled=57300 syndrome_id=13180 p=0.005 status=done
+labeled=57400 syndrome_id=13280 p=0.005 status=done
+labeled=57500 syndrome_id=13380 p=0.005 status=done
+labeled=57600 syndrome_id=13480 p=0.005 status=done
+labeled=57700 syndrome_id=13580 p=0.005 status=done
+labeled=57800 syndrome_id=13680 p=0.005 status=done
+labeled=57900 syndrome_id=13780 p=0.005 status=done
+labeled=58000 syndrome_id=13880 p=0.005 status=done
+labeled=58100 syndrome_id=13980 p=0.005 status=done
+labeled=58200 syndrome_id=14080 p=0.005 status=done
+labeled=58300 syndrome_id=14180 p=0.005 status=done
+labeled=58400 syndrome_id=14280 p=0.005 status=done
+labeled=58500 syndrome_id=14380 p=0.005 status=done
+labeled=58600 syndrome_id=14480 p=0.005 status=done
+labeled=58700 syndrome_id=14580 p=0.005 status=done
+labeled=58800 syndrome_id=14680 p=0.005 status=done
+labeled=58900 syndrome_id=14780 p=0.005 status=done
+labeled=59000 syndrome_id=14880 p=0.005 status=done
+labeled=59100 syndrome_id=14980 p=0.005 status=done
+labeled=59200 syndrome_id=15080 p=0.005 status=done
+labeled=59300 syndrome_id=15180 p=0.005 status=done
+labeled=59400 syndrome_id=15280 p=0.005 status=done
+labeled=59500 syndrome_id=15380 p=0.005 status=done
+labeled=59600 syndrome_id=15480 p=0.005 status=done
+labeled=59700 syndrome_id=15580 p=0.005 status=done
+labeled=59800 syndrome_id=15680 p=0.005 status=done
+labeled=59900 syndrome_id=15780 p=0.005 status=done
+labeled=60000 syndrome_id=15880 p=0.005 status=done
+labeled=60100 syndrome_id=15980 p=0.005 status=review
+labeled=60200 syndrome_id=16080 p=0.005 status=done
+labeled=60300 syndrome_id=16180 p=0.005 status=done
+labeled=60400 syndrome_id=16280 p=0.005 status=done
+labeled=60500 syndrome_id=16380 p=0.005 status=done
+labeled=60600 syndrome_id=16480 p=0.005 status=done
+labeled=60700 syndrome_id=16580 p=0.005 status=done
+labeled=60800 syndrome_id=16680 p=0.005 status=done
+labeled=60900 syndrome_id=16780 p=0.005 status=done
+labeled=61000 syndrome_id=16880 p=0.005 status=done
+labeled=61100 syndrome_id=16980 p=0.005 status=done
+labeled=61200 syndrome_id=17080 p=0.005 status=done
+labeled=61300 syndrome_id=17180 p=0.005 status=done
+labeled=61400 syndrome_id=17280 p=0.005 status=done
+labeled=61500 syndrome_id=17380 p=0.005 status=done
+labeled=61600 syndrome_id=17480 p=0.005 status=done
+labeled=61700 syndrome_id=17580 p=0.005 status=done
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=61800 syndrome_id=18 p=0.007 status=done
+labeled=61900 syndrome_id=118 p=0.007 status=done
+labeled=62000 syndrome_id=218 p=0.007 status=done
+labeled=62100 syndrome_id=318 p=0.007 status=done
+labeled=62200 syndrome_id=418 p=0.007 status=done
+labeled=62300 syndrome_id=518 p=0.007 status=done
+labeled=62400 syndrome_id=618 p=0.007 status=done
+labeled=62500 syndrome_id=718 p=0.007 status=done
+labeled=62600 syndrome_id=818 p=0.007 status=done
+labeled=62700 syndrome_id=918 p=0.007 status=done
+labeled=62800 syndrome_id=1018 p=0.007 status=done
+labeled=62900 syndrome_id=1118 p=0.007 status=done
+labeled=63000 syndrome_id=1218 p=0.007 status=done
+labeled=63100 syndrome_id=1318 p=0.007 status=done
+labeled=63200 syndrome_id=1418 p=0.007 status=done
+labeled=63300 syndrome_id=1518 p=0.007 status=done
+labeled=63400 syndrome_id=1618 p=0.007 status=done
+labeled=63500 syndrome_id=1718 p=0.007 status=done
+labeled=63600 syndrome_id=1818 p=0.007 status=done
+labeled=63700 syndrome_id=1918 p=0.007 status=done
+labeled=63800 syndrome_id=2018 p=0.007 status=done
+labeled=63900 syndrome_id=2118 p=0.007 status=done
+labeled=64000 syndrome_id=2218 p=0.007 status=done
+labeled=64100 syndrome_id=2318 p=0.007 status=done
+labeled=64200 syndrome_id=2418 p=0.007 status=done
+labeled=64300 syndrome_id=2518 p=0.007 status=done
+labeled=64400 syndrome_id=2618 p=0.007 status=done
+labeled=64500 syndrome_id=2718 p=0.007 status=done
+labeled=64600 syndrome_id=2818 p=0.007 status=done
+labeled=64700 syndrome_id=2918 p=0.007 status=done
+labeled=64800 syndrome_id=3018 p=0.007 status=done
+labeled=64900 syndrome_id=3118 p=0.007 status=done
+labeled=65000 syndrome_id=3218 p=0.007 status=done
+labeled=65100 syndrome_id=3318 p=0.007 status=done
+labeled=65200 syndrome_id=3418 p=0.007 status=done
+labeled=65300 syndrome_id=3518 p=0.007 status=done
+labeled=65400 syndrome_id=3618 p=0.007 status=done
+labeled=65500 syndrome_id=3718 p=0.007 status=done
+labeled=65600 syndrome_id=3818 p=0.007 status=done
+labeled=65700 syndrome_id=3918 p=0.007 status=done
+labeled=65800 syndrome_id=4018 p=0.007 status=done
+labeled=65900 syndrome_id=4118 p=0.007 status=done
+labeled=66000 syndrome_id=4218 p=0.007 status=done
+labeled=66100 syndrome_id=4318 p=0.007 status=done
+labeled=66200 syndrome_id=4418 p=0.007 status=done
+labeled=66300 syndrome_id=4518 p=0.007 status=done
+labeled=66400 syndrome_id=4618 p=0.007 status=done
+labeled=66500 syndrome_id=4718 p=0.007 status=done
+labeled=66600 syndrome_id=4818 p=0.007 status=done
+labeled=66700 syndrome_id=4918 p=0.007 status=done
+labeled=66800 syndrome_id=5018 p=0.007 status=done
+labeled=66900 syndrome_id=5118 p=0.007 status=done
+labeled=67000 syndrome_id=5218 p=0.007 status=done
+labeled=67100 syndrome_id=5318 p=0.007 status=done
+labeled=67200 syndrome_id=5418 p=0.007 status=done
+labeled=67300 syndrome_id=5518 p=0.007 status=done
+labeled=67400 syndrome_id=5618 p=0.007 status=done
+labeled=67500 syndrome_id=5718 p=0.007 status=done
+labeled=67600 syndrome_id=5818 p=0.007 status=done
+labeled=67700 syndrome_id=5918 p=0.007 status=done
+labeled=67800 syndrome_id=6018 p=0.007 status=done
+labeled=67900 syndrome_id=6118 p=0.007 status=done
+labeled=68000 syndrome_id=6218 p=0.007 status=done
+labeled=68100 syndrome_id=6318 p=0.007 status=done
+labeled=68200 syndrome_id=6418 p=0.007 status=done
+labeled=68300 syndrome_id=6518 p=0.007 status=done
+labeled=68400 syndrome_id=6618 p=0.007 status=done
+labeled=68500 syndrome_id=6718 p=0.007 status=done
+labeled=68600 syndrome_id=6818 p=0.007 status=done
+labeled=68700 syndrome_id=6918 p=0.007 status=done
+labeled=68800 syndrome_id=7018 p=0.007 status=done
+labeled=68900 syndrome_id=7118 p=0.007 status=done
+labeled=69000 syndrome_id=7218 p=0.007 status=done
+labeled=69100 syndrome_id=7318 p=0.007 status=done
+labeled=69200 syndrome_id=7418 p=0.007 status=done
+labeled=69300 syndrome_id=7518 p=0.007 status=done
+labeled=69400 syndrome_id=7618 p=0.007 status=done
+labeled=69500 syndrome_id=7718 p=0.007 status=done
+labeled=69600 syndrome_id=7818 p=0.007 status=done
+labeled=69700 syndrome_id=7918 p=0.007 status=done
+labeled=69800 syndrome_id=8018 p=0.007 status=done
+labeled=69900 syndrome_id=8118 p=0.007 status=done
+labeled=70000 syndrome_id=8218 p=0.007 status=done
+labeled=70100 syndrome_id=8318 p=0.007 status=done
+labeled=70200 syndrome_id=8418 p=0.007 status=done
+labeled=70300 syndrome_id=8518 p=0.007 status=done
+labeled=70400 syndrome_id=8618 p=0.007 status=done
+labeled=70500 syndrome_id=8718 p=0.007 status=done
+labeled=70600 syndrome_id=8818 p=0.007 status=done
+labeled=70700 syndrome_id=8918 p=0.007 status=done
+labeled=70800 syndrome_id=9018 p=0.007 status=done
+labeled=70900 syndrome_id=9118 p=0.007 status=done
+labeled=71000 syndrome_id=9218 p=0.007 status=done
+labeled=71100 syndrome_id=9318 p=0.007 status=done
+labeled=71200 syndrome_id=9418 p=0.007 status=done
+labeled=71300 syndrome_id=9518 p=0.007 status=done
+labeled=71400 syndrome_id=9618 p=0.007 status=done
+labeled=71500 syndrome_id=9718 p=0.007 status=done
+labeled=71600 syndrome_id=9818 p=0.007 status=done
+labeled=71700 syndrome_id=9918 p=0.007 status=done
+labeled=71800 syndrome_id=10018 p=0.007 status=done
+labeled=71900 syndrome_id=10118 p=0.007 status=done
+labeled=72000 syndrome_id=10218 p=0.007 status=done
+labeled=72100 syndrome_id=10318 p=0.007 status=done
+labeled=72200 syndrome_id=10418 p=0.007 status=done
+labeled=72300 syndrome_id=10518 p=0.007 status=done
+labeled=72400 syndrome_id=10618 p=0.007 status=done
+labeled=72500 syndrome_id=10718 p=0.007 status=done
+labeled=72600 syndrome_id=10818 p=0.007 status=done
+labeled=72700 syndrome_id=10918 p=0.007 status=done
+labeled=72800 syndrome_id=11018 p=0.007 status=done
+labeled=72900 syndrome_id=11118 p=0.007 status=done
+labeled=73000 syndrome_id=11218 p=0.007 status=done
+labeled=73100 syndrome_id=11318 p=0.007 status=done
+labeled=73200 syndrome_id=11418 p=0.007 status=done
+labeled=73300 syndrome_id=11518 p=0.007 status=done
+labeled=73400 syndrome_id=11618 p=0.007 status=done
+labeled=73500 syndrome_id=11718 p=0.007 status=done
+labeled=73600 syndrome_id=11818 p=0.007 status=done
+labeled=73700 syndrome_id=11918 p=0.007 status=done
+labeled=73800 syndrome_id=12018 p=0.007 status=done
+labeled=73900 syndrome_id=12118 p=0.007 status=done
+labeled=74000 syndrome_id=12218 p=0.007 status=done
+labeled=74100 syndrome_id=12318 p=0.007 status=done
+labeled=74200 syndrome_id=12418 p=0.007 status=done
+labeled=74300 syndrome_id=12518 p=0.007 status=done
+labeled=74400 syndrome_id=12618 p=0.007 status=done
+labeled=74500 syndrome_id=12718 p=0.007 status=done
+labeled=74600 syndrome_id=12818 p=0.007 status=done
+labeled=74700 syndrome_id=12918 p=0.007 status=done
+labeled=74800 syndrome_id=13018 p=0.007 status=done
+labeled=74900 syndrome_id=13118 p=0.007 status=done
+labeled=75000 syndrome_id=13218 p=0.007 status=done
+labeled=75100 syndrome_id=13318 p=0.007 status=done
+labeled=75200 syndrome_id=13418 p=0.007 status=done
+labeled=75300 syndrome_id=13518 p=0.007 status=done
+labeled=75400 syndrome_id=13618 p=0.007 status=done
+labeled=75500 syndrome_id=13718 p=0.007 status=done
+labeled=75600 syndrome_id=13818 p=0.007 status=done
+labeled=75700 syndrome_id=13918 p=0.007 status=done
+labeled=75800 syndrome_id=14018 p=0.007 status=done
+labeled=75900 syndrome_id=14118 p=0.007 status=done
+labeled=76000 syndrome_id=14218 p=0.007 status=done
+labeled=76100 syndrome_id=14318 p=0.007 status=done
+labeled=76200 syndrome_id=14418 p=0.007 status=done
+labeled=76300 syndrome_id=14518 p=0.007 status=done
+labeled=76400 syndrome_id=14618 p=0.007 status=done
+labeled=76500 syndrome_id=14718 p=0.007 status=done
+labeled=76600 syndrome_id=14818 p=0.007 status=done
+labeled=76700 syndrome_id=14918 p=0.007 status=done
+labeled=76800 syndrome_id=15018 p=0.007 status=done
+labeled=76900 syndrome_id=15118 p=0.007 status=done
+labeled=77000 syndrome_id=15218 p=0.007 status=done
+labeled=77100 syndrome_id=15318 p=0.007 status=done
+labeled=77200 syndrome_id=15418 p=0.007 status=done
+labeled=77300 syndrome_id=15518 p=0.007 status=done
+labeled=77400 syndrome_id=15618 p=0.007 status=done
+labeled=77500 syndrome_id=15718 p=0.007 status=done
+labeled=77600 syndrome_id=15818 p=0.007 status=done
+labeled=77700 syndrome_id=15918 p=0.007 status=done
+labeled=77800 syndrome_id=16018 p=0.007 status=done
+labeled=77900 syndrome_id=16118 p=0.007 status=done
+labeled=78000 syndrome_id=16218 p=0.007 status=done
+labeled=78100 syndrome_id=16318 p=0.007 status=done
+labeled=78200 syndrome_id=16418 p=0.007 status=done
+labeled=78300 syndrome_id=16518 p=0.007 status=done
+labeled=78400 syndrome_id=16618 p=0.007 status=done
+labeled=78500 syndrome_id=16718 p=0.007 status=done
+labeled=78600 syndrome_id=16818 p=0.007 status=done
+labeled=78700 syndrome_id=16918 p=0.007 status=done
+labeled=78800 syndrome_id=17018 p=0.007 status=done
+labeled=78900 syndrome_id=17118 p=0.007 status=done
+labeled=79000 syndrome_id=17218 p=0.007 status=done
+labeled=79100 syndrome_id=17318 p=0.007 status=done
+labeled=79200 syndrome_id=17418 p=0.007 status=done
+labeled=79300 syndrome_id=17518 p=0.007 status=done
+labeled=79400 syndrome_id=17618 p=0.007 status=done
+(Re-)set contractor: cutensornet on device: cuda with backend: numpy
+Using dtype: float64
+labeled=79500 syndrome_id=56 p=0.01 status=done
+labeled=79600 syndrome_id=156 p=0.01 status=done
+labeled=79700 syndrome_id=256 p=0.01 status=done
+labeled=79800 syndrome_id=356 p=0.01 status=done
+labeled=79900 syndrome_id=456 p=0.01 status=done
+labeled=80000 syndrome_id=556 p=0.01 status=done
+labeled=80100 syndrome_id=656 p=0.01 status=done
+labeled=80200 syndrome_id=756 p=0.01 status=done
+labeled=80300 syndrome_id=856 p=0.01 status=done
+labeled=80400 syndrome_id=956 p=0.01 status=done
+labeled=80500 syndrome_id=1056 p=0.01 status=done
+labeled=80600 syndrome_id=1156 p=0.01 status=done
+labeled=80700 syndrome_id=1256 p=0.01 status=done
+labeled=80800 syndrome_id=1356 p=0.01 status=done
+labeled=80900 syndrome_id=1456 p=0.01 status=done
+labeled=81000 syndrome_id=1556 p=0.01 status=done
+labeled=81100 syndrome_id=1656 p=0.01 status=done
+labeled=81200 syndrome_id=1756 p=0.01 status=done
+labeled=81300 syndrome_id=1856 p=0.01 status=done
+labeled=81400 syndrome_id=1956 p=0.01 status=done
+labeled=81500 syndrome_id=2056 p=0.01 status=done
+labeled=81600 syndrome_id=2156 p=0.01 status=done
+labeled=81700 syndrome_id=2256 p=0.01 status=done
+labeled=81800 syndrome_id=2356 p=0.01 status=done
+labeled=81900 syndrome_id=2456 p=0.01 status=done
+labeled=82000 syndrome_id=2556 p=0.01 status=done
+labeled=82100 syndrome_id=2656 p=0.01 status=done
+labeled=82200 syndrome_id=2756 p=0.01 status=done
+labeled=82300 syndrome_id=2856 p=0.01 status=done
+labeled=82400 syndrome_id=2956 p=0.01 status=done
+labeled=82500 syndrome_id=3056 p=0.01 status=done
+labeled=82600 syndrome_id=3156 p=0.01 status=done
+labeled=82700 syndrome_id=3256 p=0.01 status=done
+labeled=82800 syndrome_id=3356 p=0.01 status=done
+labeled=82900 syndrome_id=3456 p=0.01 status=done
+labeled=83000 syndrome_id=3556 p=0.01 status=done
+labeled=83100 syndrome_id=3656 p=0.01 status=done
+labeled=83200 syndrome_id=3756 p=0.01 status=done
+labeled=83300 syndrome_id=3856 p=0.01 status=done
+labeled=83400 syndrome_id=3956 p=0.01 status=done
+labeled=83500 syndrome_id=4056 p=0.01 status=done
+labeled=83600 syndrome_id=4156 p=0.01 status=done
+labeled=83700 syndrome_id=4256 p=0.01 status=done
+labeled=83800 syndrome_id=4356 p=0.01 status=done
+labeled=83900 syndrome_id=4456 p=0.01 status=done
+labeled=84000 syndrome_id=4556 p=0.01 status=done
+labeled=84100 syndrome_id=4656 p=0.01 status=done
+labeled=84200 syndrome_id=4756 p=0.01 status=done
+labeled=84300 syndrome_id=4856 p=0.01 status=done
+labeled=84400 syndrome_id=4956 p=0.01 status=done
+labeled=84500 syndrome_id=5056 p=0.01 status=done
+labeled=84600 syndrome_id=5156 p=0.01 status=done
+labeled=84700 syndrome_id=5256 p=0.01 status=done
+labeled=84800 syndrome_id=5356 p=0.01 status=done
+labeled=84900 syndrome_id=5456 p=0.01 status=done
+labeled=85000 syndrome_id=5556 p=0.01 status=done
+labeled=85100 syndrome_id=5656 p=0.01 status=done
+labeled=85200 syndrome_id=5756 p=0.01 status=done
+labeled=85300 syndrome_id=5856 p=0.01 status=done
+labeled=85400 syndrome_id=5956 p=0.01 status=done
+labeled=85500 syndrome_id=6056 p=0.01 status=done
+labeled=85600 syndrome_id=6156 p=0.01 status=done
+labeled=85700 syndrome_id=6256 p=0.01 status=done
+labeled=85800 syndrome_id=6356 p=0.01 status=done
+labeled=85900 syndrome_id=6456 p=0.01 status=done
+labeled=86000 syndrome_id=6556 p=0.01 status=done
+labeled=86100 syndrome_id=6656 p=0.01 status=done
+labeled=86200 syndrome_id=6756 p=0.01 status=done
+labeled=86300 syndrome_id=6856 p=0.01 status=done
+labeled=86400 syndrome_id=6956 p=0.01 status=done
+labeled=86500 syndrome_id=7056 p=0.01 status=done
+labeled=86600 syndrome_id=7156 p=0.01 status=done
+labeled=86700 syndrome_id=7256 p=0.01 status=done
+labeled=86800 syndrome_id=7356 p=0.01 status=done
+labeled=86900 syndrome_id=7456 p=0.01 status=done
+labeled=87000 syndrome_id=7556 p=0.01 status=done
+labeled=87100 syndrome_id=7656 p=0.01 status=done
+labeled=87200 syndrome_id=7756 p=0.01 status=done
+labeled=87300 syndrome_id=7856 p=0.01 status=done
+labeled=87400 syndrome_id=7956 p=0.01 status=done
+labeled=87500 syndrome_id=8056 p=0.01 status=done
+labeled=87600 syndrome_id=8156 p=0.01 status=done
+labeled=87700 syndrome_id=8256 p=0.01 status=done
+labeled=87800 syndrome_id=8356 p=0.01 status=done
+labeled=87900 syndrome_id=8456 p=0.01 status=done
+labeled=88000 syndrome_id=8556 p=0.01 status=done
+labeled=88100 syndrome_id=8656 p=0.01 status=done
+labeled=88200 syndrome_id=8756 p=0.01 status=done
+labeled=88300 syndrome_id=8856 p=0.01 status=done
+labeled=88400 syndrome_id=8956 p=0.01 status=done
+labeled=88500 syndrome_id=9056 p=0.01 status=done
+labeled=88600 syndrome_id=9156 p=0.01 status=done
+labeled=88700 syndrome_id=9256 p=0.01 status=done
+labeled=88800 syndrome_id=9356 p=0.01 status=done
+labeled=88900 syndrome_id=9456 p=0.01 status=done
+labeled=89000 syndrome_id=9556 p=0.01 status=done
+labeled=89100 syndrome_id=9656 p=0.01 status=done
+labeled=89200 syndrome_id=9756 p=0.01 status=done
+labeled=89300 syndrome_id=9856 p=0.01 status=done
+labeled=89400 syndrome_id=9956 p=0.01 status=done
+labeled=89500 syndrome_id=10056 p=0.01 status=done
+labeled=89600 syndrome_id=10156 p=0.01 status=done
+labeled=89700 syndrome_id=10256 p=0.01 status=done
+labeled=89800 syndrome_id=10356 p=0.01 status=done
+labeled=89900 syndrome_id=10456 p=0.01 status=done
+labeled=90000 syndrome_id=10556 p=0.01 status=done
+labeled=90100 syndrome_id=10656 p=0.01 status=done
+labeled=90200 syndrome_id=10756 p=0.01 status=done
+labeled=90300 syndrome_id=10856 p=0.01 status=done
+labeled=90400 syndrome_id=10956 p=0.01 status=done
+labeled=90500 syndrome_id=11056 p=0.01 status=done
+labeled=90600 syndrome_id=11156 p=0.01 status=done
+labeled=90700 syndrome_id=11256 p=0.01 status=done
+labeled=90800 syndrome_id=11356 p=0.01 status=done
+labeled=90900 syndrome_id=11456 p=0.01 status=done
+labeled=91000 syndrome_id=11556 p=0.01 status=done
+labeled=91100 syndrome_id=11656 p=0.01 status=done
+labeled=91200 syndrome_id=11756 p=0.01 status=done
+labeled=91300 syndrome_id=11856 p=0.01 status=done
+labeled=91400 syndrome_id=11956 p=0.01 status=done
+labeled=91500 syndrome_id=12056 p=0.01 status=done
+labeled=91600 syndrome_id=12156 p=0.01 status=done
+labeled=91700 syndrome_id=12256 p=0.01 status=done
+labeled=91800 syndrome_id=12356 p=0.01 status=done
+labeled=91900 syndrome_id=12456 p=0.01 status=done
+labeled=92000 syndrome_id=12556 p=0.01 status=done
+labeled=92100 syndrome_id=12656 p=0.01 status=done
+labeled=92200 syndrome_id=12756 p=0.01 status=done
+labeled=92300 syndrome_id=12856 p=0.01 status=done
+labeled=92400 syndrome_id=12956 p=0.01 status=done
+labeled=92500 syndrome_id=13056 p=0.01 status=done
+labeled=92600 syndrome_id=13156 p=0.01 status=done
+labeled=92700 syndrome_id=13256 p=0.01 status=done
+labeled=92800 syndrome_id=13356 p=0.01 status=done
+labeled=92900 syndrome_id=13456 p=0.01 status=done
+labeled=93000 syndrome_id=13556 p=0.01 status=done
+labeled=93100 syndrome_id=13656 p=0.01 status=done
+labeled=93200 syndrome_id=13756 p=0.01 status=done
+labeled=93300 syndrome_id=13856 p=0.01 status=done
+labeled=93400 syndrome_id=13956 p=0.01 status=done
+labeled=93500 syndrome_id=14056 p=0.01 status=done
+labeled=93600 syndrome_id=14156 p=0.01 status=done
+labeled=93700 syndrome_id=14256 p=0.01 status=done
+labeled=93800 syndrome_id=14356 p=0.01 status=done
+labeled=93900 syndrome_id=14456 p=0.01 status=done
+labeled=94000 syndrome_id=14556 p=0.01 status=done
+labeled=94100 syndrome_id=14656 p=0.01 status=done
+labeled=94200 syndrome_id=14756 p=0.01 status=done
+labeled=94300 syndrome_id=14856 p=0.01 status=done
+labeled=94400 syndrome_id=14956 p=0.01 status=done
+labeled=94500 syndrome_id=15056 p=0.01 status=done
+labeled=94600 syndrome_id=15156 p=0.01 status=done
+labeled=94700 syndrome_id=15256 p=0.01 status=done
+labeled=94800 syndrome_id=15356 p=0.01 status=done
+labeled=94900 syndrome_id=15456 p=0.01 status=done
+labeled=95000 syndrome_id=15556 p=0.01 status=done
+labeled=95100 syndrome_id=15656 p=0.01 status=done
+labeled=95200 syndrome_id=15756 p=0.01 status=done
+labeled=95300 syndrome_id=15856 p=0.01 status=done
+labeled=95400 syndrome_id=15956 p=0.01 status=done
+labeled=95500 syndrome_id=16056 p=0.01 status=done
+labeled=95600 syndrome_id=16156 p=0.01 status=done
+labeled=95700 syndrome_id=16256 p=0.01 status=done
+labeled=95800 syndrome_id=16356 p=0.01 status=done
+labeled=95900 syndrome_id=16456 p=0.01 status=done
+labeled=96000 syndrome_id=16556 p=0.01 status=done
+labeled=96100 syndrome_id=16656 p=0.01 status=done
+labeled=96200 syndrome_id=16756 p=0.01 status=done
+labeled=96300 syndrome_id=16856 p=0.01 status=done
+labeled=96400 syndrome_id=16956 p=0.01 status=done
+labeled=96500 syndrome_id=17056 p=0.01 status=done
+labeled=96600 syndrome_id=17156 p=0.01 status=done
+labeled=96700 syndrome_id=17256 p=0.01 status=done
+labeled=96800 syndrome_id=17356 p=0.01 status=done
+labeled=96900 syndrome_id=17456 p=0.01 status=done
+labeled=97000 syndrome_id=17556 p=0.01 status=done
+labeled=97100 syndrome_id=17656 p=0.01 status=done
+{
+  "generated_error_records": 47629,
+  "generation_complete": true,
+  "unique_syndromes": 17662,
+  "selected_syndromes": 17662,
+  "expected_label_tasks": 105972,
+  "valid_labels": 104080,
+  "review_labels": 1882,
+  "probability_boundary_corrected_labels": 1,
+  "failed_tasks": 10,
+  "pending_tasks": 0,
+  "remaining_nonvalid_tasks": 1892,
+  "success": false,
+  "validation_passed": false,
+  "source_record_counts": {
+    "enumerate": 2629,
+    "natural": 30000,
+    "stress": 15000
+  },
+  "p_grid": [
+    0.001,
+    0.002,
+    0.003,
+    0.005,
+    0.007,
+    0.01
+  ],
+  "median_decode_seconds": 0.14912576251663268,
+  "total_decode_seconds": 16266.578134479409,
+  "updated_at_utc": "2026-10-15T11:35:41.890121+00:00",
+  "config_sha256": "b584489dbfdd028a5ab5e831c4f508eee46bc1b6bdf2bd797b90f6c9d82a3b44",
+  "exported_ml_rows": 104080,
+  "export_includes_review": false
+}
+===== FINISHED =====
+Thu Oct 15 19:35:59 +08 2026
+exit status=2
