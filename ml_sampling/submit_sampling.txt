@@ -1,0 +1,62 @@
+#!/bin/bash
+#PBS -q normal
+#PBS -l select=1:ncpus=32:ngpus=1:mpiprocs=1:ompthreads=32
+#PBS -l walltime=120:00:00
+#PBS -P 43004235
+#PBS -j oe
+#PBS -o output-bb72-ml-sampling.txt
+#PBS -N bb72-ml-sampling
+
+set -euo pipefail
+cd "${PBS_O_WORKDIR:-$(pwd)}"
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate cudaqx-qec
+export OMP_NUM_THREADS=1
+
+echo "===== ENVIRONMENT / GPU CHECK ====="
+date
+hostname
+pwd
+echo "PBS_JOBID=${PBS_JOBID:-unset}"
+echo "CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-unset}"
+which python
+python -c "import sys; print(sys.executable)"
+nvidia-smi || exit 1
+python -c "import torch; print('torch=', torch.__version__); print('torch_cuda=', torch.version.cuda); print('cuda_available=', torch.cuda.is_available()); print('gpu_count=', torch.cuda.device_count()); assert torch.cuda.is_available(), 'CUDA unavailable; stop before sampling'; print('gpu0=', torch.cuda.get_device_name(0))" || exit 1
+
+# Submit from ml_sampling/. Repeat the SAME output directory to resume.
+# The default job labels only 10 syndromes at six p values (60 tasks).
+OUT_DIR="${OUT_DIR:-results/bb72_ml_small_p}"
+MAX_SYNDROMES="${MAX_SYNDROMES:-10}"
+P_GRID="${P_GRID:-0.001,0.002,0.003,0.005,0.007,0.01}"
+PROFILE="${PROFILE:-../v0.5_p0/profiles/best_93.pkl}"
+CONTINUE_ON_ERROR="${CONTINUE_ON_ERROR:-1}"
+cmd=(python -u sample_bb72_dataset.py --output-dir "$OUT_DIR"
+     --profile "$PROFILE" --p-grid "$P_GRID" --max-seconds 84600)
+if [[ "$CONTINUE_ON_ERROR" == "1" ]]; then
+    cmd+=(--continue-on-error)
+fi
+if [[ "$MAX_SYNDROMES" != "all" ]]; then
+    cmd+=(--max-syndromes "$MAX_SYNDROMES")
+fi
+if [[ "${RECOVER_LOCK:-0}" == "1" ]]; then
+    cmd+=(--recover-lock)
+fi
+if [[ "${RETRY_FAILED:-0}" == "1" ]]; then
+    cmd+=(--retry-failed)
+fi
+if [[ "${UPGRADE_CHECKPOINT:-0}" == "1" ]]; then
+    cmd+=(--upgrade-roundoff-checkpoint)
+fi
+echo "===== START BB72 ML SAMPLING ====="
+echo "output_dir=$OUT_DIR max_syndromes=$MAX_SYNDROMES profile=$PROFILE"
+echo "continue_on_error=$CONTINUE_ON_ERROR retry_failed=${RETRY_FAILED:-0}"
+if "${cmd[@]}"; then
+    status=0
+else
+    status=$?
+fi
+echo "===== FINISHED ====="
+date
+echo "exit status=$status"
+exit "$status"
